@@ -20,6 +20,25 @@ class Library:
             print(f"Buku '{removed_book}' berhasil dihapus!")
         else:
             print("Indeks tidak valid!")
+    def display_books(self):
+        if not self.books:
+            print("Perpustakaannya masih kosong")
+        else:
+            print("Buku yang ada di perpustakaann 45:")
+            for i, book in enumerate(self.books, start=1):
+                print(f"{i}.{book}")
+    def main():
+        library = Library()
+        welcome_message()
+
+        while True:
+            print("\nMenu Perpustakaan")
+            print("1. Tambahkan Buku Baru")
+            print("2. Tampilkan Semua Buku")
+            print("3. Hapus Buku")
+            print("4. Total Buku")
+            print("5. Keluar")
+            choice = input("Pilih Opsi Di Atas (1-5):")
 if choice == '1':
             title = input("Judul Buku: ")
             author = input("Penulis: ")
