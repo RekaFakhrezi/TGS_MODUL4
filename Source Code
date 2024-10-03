@@ -1,1 +1,22 @@
+def create_book(Title, Penulis):
+    return f"Judul: {Title}, Penulis: {Penulis}"
 
+def welcome_message():
+    print("Selamat datang di Perpustakaan 45!")
+
+class Library:
+    def init(self):
+        self.books = []
+
+    def get_total_books(self):
+        return len(self.books)
+
+    def add_book(self, book):
+        self.books.append(book)
+
+    def remove_book(self, index):
+        if 0 <= index < len(self.books):
+            removed_book = self.books.pop(index)
+            print(f"Buku '{removed_book}' berhasil dihapus!")
+        else:
+            print("Indeks tidak valid!")
