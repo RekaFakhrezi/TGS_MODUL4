@@ -20,3 +20,18 @@ class Library:
             print(f"Buku '{removed_book}' berhasil dihapus!")
         else:
             print("Indeks tidak valid!")
+if choice == '1':
+            title = input("Judul Buku: ")
+            author = input("Penulis: ")
+            new_book = create_book(title, author)
+            library.add_book(new_book)
+            print("Buku Berhasil Ditambahkan!")
+
+        elif choice == '2':
+            library.display_books()
+
+        elif choice == '3':
+            library.display_books()
+            if library.get_total_books() > 0:
+                index = int(input("Masukkan nomor buku yang ingin dihapus: ")) - 1
+                library.remove_book(index)
