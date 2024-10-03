@@ -54,3 +54,16 @@ if choice == '1':
             if library.get_total_books() > 0:
                 index = int(input("Masukkan nomor buku yang ingin dihapus: ")) - 1
                 library.remove_book(index)
+
+        elif choice == '4':
+                    print(f"Total Buku yang Tersimpan: {library.get_total_books()}")
+
+        elif choice == '5':
+            print("Terima Kasih Sudah Mengunjungi, Sampai Jumpa!")
+            break
+
+        else:
+            print("Pilihan tidak valid!")
+
+if name == "main":
+    main()
